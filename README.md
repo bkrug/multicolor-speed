@@ -6,8 +6,8 @@ Every one of the 3,072 4x4-pixel "boxes" can be updated by writing 1.5K to VDP R
 
 The purpose of this experiment, was to get an idea of what kind of frame-rate someone can get when engaging in fast-paced image updates.
 In this example, we assume that some routine has a 3K region in CPU RAM, with each byte representing one of the multicolor mode boxes.
-4-bits in every byte is being wasted, but this other routine can update the boxes in a random order.
-This hypothetical routine probably is drawing lines and shapes.
+4-bits in every byte is being wasted, but that hypothetical routine can update the boxes in a random order.
+That hypothetical routine probably is drawing lines and shapes.
 
 The code in this experiment is taking that 3K image map, and compressing it down to 1.5K to send to the VDP RAM.
 Once we try this with a routine stored in cartridge ROM.
@@ -21,5 +21,5 @@ Yes, with another algorithm, you could write multicolor data more quickly than 3
 If you have a static background and just want to scroll very quickly,
 I imagine you could create a faster algorithm.
 Maybe you could scrunch it down to 1/60th of a second.
-In such a case, you've probably already compressed the background down to 1.5K of memory.
-But this thought experiment was contemplating a dynamicly generated background. 
+In such a case, you've probably already compressed the background down such that each byte represents two 4x4 boxes.
+But such a practice would not be compatible with a dynamicly generated background. 
