@@ -10,10 +10,11 @@ In this example, we assume that some routine has a 3K region in CPU RAM, with ea
 That hypothetical routine probably is drawing lines and shapes.
 
 The code in this experiment is taking that 3K image map, and compressing it down to 1.5K to send to the VDP RAM.
-Once we try this with a routine stored in cartridge ROM.
+We attempt this in two different ways.
+In one attempt, we try this with a routine stored in cartridge ROM.
 In a second attempt we try this with a routine that has been copied to the scratch PAD RAM.
 
-Unfortunately, the faster of these two approaches still takes about 3/60ths of a second, so we are already limited to 20 frmes-per-second.
+Unfortunately, the faster of these two approaches still takes about 3/60ths of a second, so we are already limited to 20 frames-per-second.
 Since that hypothetical line drawing routine would need time to set up the image in CPU RAM,
 using multicolor mode in this way would probably only achieve 10 or 15 FPS.
 
